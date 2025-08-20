@@ -2,7 +2,7 @@
 type TodoProps = {
   todo: {
     id: number;
-    isComplete: boolean;
+    isComplete?: boolean;
     title: string;
   };
 };
