@@ -7,7 +7,6 @@ interface Todo {
   completed?: boolean;
 }
 
-import TodoCard from "../todo-card/TodoCard";
 
 interface TodoListProps {
   todos: Todo[];
