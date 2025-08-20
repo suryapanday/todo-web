@@ -13,7 +13,7 @@ export async function getTodosAction() {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log("Error fetching the data");
+    console.log("Error fetching the data", error);
   }
   revalidatePath("/");
 }
@@ -22,7 +22,7 @@ export async function createTodoAction(formData: FormData) {
   const title = formData.get("title");
   console.log(formData);
   try {
-    const response = await fetch(base_url, {
+    await fetch(base_url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -40,7 +40,6 @@ export async function createTodoAction(formData: FormData) {
 export async function updateTodoAction(formData: FormData) {
   // i want to update is user clicked tik
   // i want to update on chnageing the input
-  const isComplete = formData.get("isComplete");
   const title = formData.get("title");
   const id = formData.get("id");
   console.log(formData);
