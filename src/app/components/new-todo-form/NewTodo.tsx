@@ -1,4 +1,4 @@
-export default function NewTodo({ action }: { action: any }) {
+export default function NewTodo({ action }: { action: unknown }) {
   return (
     // on click
     <form action={action} className="w-full flex flex-row gap-2  ">
