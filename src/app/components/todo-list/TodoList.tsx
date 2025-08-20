@@ -2,8 +2,8 @@
 
 import TodoCard from "../todo-card/TodoCard";
 interface Todo {
-  id: string; // or number
-  title: string;
+  id: number;
+  title: string; 
   isComplete?: boolean;
 }
 
