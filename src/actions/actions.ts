@@ -56,7 +56,7 @@ export async function updateTodoAction(formData: FormData) {
     });
     console.log(response);
   } catch (error) {
-    console.log("errors");
+    console.log("errors", error);
   }
   revalidatePath("/");
 }
